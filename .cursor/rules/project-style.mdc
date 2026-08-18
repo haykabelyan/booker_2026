@@ -1,0 +1,40 @@
+
+Всегда отвечай на русском языке
+
+---
+description: Simple Playwright rules for Junior QA Automation Engineer
+globs: /*.spec.ts, /*.test.ts, tests/**/*.ts
+alwaysApply: false
+---
+
+# Playwright Test Rules
+
+You are helping a Junior QA Automation Engineer write Playwright tests.
+
+## Main Style
+
+- Write simple, clear, readable code.
+- Do not use Page Object Model.
+- Keep all test steps inside the test file.
+- Prefer understandable code over clever abstractions.
+- Use comments to explain why something is done.
+- Avoid complicated helpers unless they make the test easier to read.
+
+## TypeScript
+
+- Use TypeScript with clear types.
+- Do not use any.
+- Use descriptive names:
+  - loginButton, not btn
+  - userEmail, not email1
+  - isErrorVisible, not err
+
+## Playwright Selectors
+
+Prefer user-facing selectors:
+
+```ts
+page.getByRole('button', { name: 'Login' });
+page.getByLabel('Email');
+page.getByText('Welcome');
+page.getByTestId('submit-button');
